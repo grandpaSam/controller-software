@@ -14,12 +14,14 @@ This is a notification command. There should not be a ID in this request.
 {"method": "jogJoint", "params": [jointIndex, direction]}
 ```
 Params:
-    jointIndex: 0 based index for the joint.
-    direction: 1 for positive direction, 0 for negative direction
+- jointIndex: 0 based index for the joint.
+- direction: 1 for positive direction, 0 for negative direction
 
 Result: None
+
 Error: 
     {{MotionError}} notification will be sent out if a jog command could not be followed.
+
 Example:
     ```
     {"method": "jogJoint", "params": [0, 1]}
@@ -33,12 +35,13 @@ This is a notification command. There should not be a ID in this request.
 {"method": "jogTool", "params": [toolIndex, vector]}
 ```
 Params:
-    toolIndex: 0 based index for the tool frame.
-    vector: Array designating the direction vecor in XYZ format (TODO: this is an assumption on the capabilites from the motion planning team. Change this if needed)
+- toolIndex: 0 based index for the tool frame.
+- vector: Array designating the direction vecor in XYZ format (TODO: this is an assumption on the capabilites from the motion planning team. Change this if needed)
 
 Result: None
-Error: 
-    {{MotionError}} notification will be sent out if a jog command could not be followed.
+
+Error: {{MotionError}} notification will be sent out if a jog command could not be followed.
+    
 Example:
     ```
     {"method": "jogTool", "params": [0, [0,1,0]]}
@@ -51,14 +54,15 @@ This is a notification command. There should not be a ID in this request.
 {"method": "jogWorkspace", "params": [workspaceIndex, vector]}
 ```
 Params:
-    workspaceIndex: 0 based index for the workspace frame.
-    vector: Array designating the direction vecor in XYZ format (TODO: this is an assumption on the capabilites from the motion planning team. Change this if needed)
+- workspaceIndex: 0 based index for the workspace frame.
+- vector: Array designating the direction vecor in XYZ format (TODO: this is an assumption on the capabilites from the motion planning team. Change this if needed)
     
 Result: None
-Error: 
-    {{MotionError}} notification will be sent out if a jog command could not be followed.
+
+Error: {{MotionError}} notification will be sent out if a jog command could not be followed.
 
 Example:
+
     ```
     {"method": "jogWorkspace", "params": [0, [0,1,0]]}
     ```
